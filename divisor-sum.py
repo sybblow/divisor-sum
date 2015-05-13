@@ -29,7 +29,7 @@ def d(n):
 
 def dsum(n, func):
     s = 0
-    for i in xrange(1, n):
+    for i in xrange(1, n+1):
         s += func(i)
     return s
 
@@ -44,7 +44,7 @@ def main():
     for fn in [d, d_me]:
         start = time.time()
         print dsum(1000000, fn)
-        print "=> {0:.2f}s".format( time.time()-start )
+        print "=> {:.2f}s".format( time.time()-start )
 
 
 if __name__ == '__main__':
